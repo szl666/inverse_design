@@ -1,0 +1,7 @@
+_target_: cdvae.pl_modules.gnn.GemNetTEncoder
+num_targets: ${data.num_targets}
+hidden_size: 128
+otf_graph: ${data.otf_graph}
+max_num_neighbors: 20
+cutoff: 7.0
+scale_file: /public/home/zlsong/GraphGAN/cdvae/pl_modules/gemnet/gemnet-dT.json

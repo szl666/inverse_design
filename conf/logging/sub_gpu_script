@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -J zl_gpu
+#SBATCH -p GPU
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH --gres=gpu:2
+#SBATCH -o %j.log
+#SBATCH -e %j.log
+
+python run.py data=catalyst expname=catalyst

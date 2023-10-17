@@ -1,0 +1,65 @@
+root_path: /fs0/home/liqiang/onega_test/data/catalyst
+prop: pbes_gap
+num_targets: 1
+# prop: scaled_lattice
+# num_targets: 6
+niggli: true
+primitive: False
+graph_method: crystalnn
+lattice_scale_method: scale_length
+preprocess_workers: 10
+readout: mean
+max_atoms: 60
+otf_graph: true
+eval_model_name: catalyst
+
+train_max_epochs: 2000
+early_stopping_patience: 100000
+teacher_forcing_max_epoch: 500
+
+datamodule:
+  _target_: cdvae.pl_data.datamodule.CrystDataModule
+
+  datasets:
+    train:
+      _target_: cdvae.pl_data.dataset.CrystDataset
+      name: Formation energy train
+      path: ${data.root_path}/train.csv
+      prop: ${data.prop}
+      niggli: ${data.niggli}
+      primitive: ${data.primitive}
+      graph_method: ${data.graph_method}
+      lattice_scale_method: ${data.lattice_scale_method}
+      preprocess_workers: ${data.preprocess_workers}
+
+    val:
+      - _target_: cdvae.pl_data.dataset.CrystDataset
+        name: Formation energy val
+        path: ${data.root_path}/val.csv
+        prop: ${data.prop}
+        niggli: ${data.niggli}
+        primitive: ${data.primitive}
+        graph_method: ${data.graph_method}
+        lattice_scale_method: ${data.lattice_scale_method}
+        preprocess_workers: ${data.preprocess_workers}
+
+    test:
+      - _target_: cdvae.pl_data.dataset.CrystDataset
+        name: Formation energy test
+        path: ${data.root_path}/test.csv
+        prop: ${data.prop}
+        niggli: ${data.niggli}
+        primitive: ${data.primitive}
+        graph_method: ${data.graph_method}
+        lattice_scale_method: ${data.lattice_scale_method}
+        preprocess_workers: ${data.preprocess_workers}
+
+  num_workers:
+    train: 0
+    val: 0
+    test: 0
+
+  batch_size:
+    train: 128
+    val: 128
+    test: 128
