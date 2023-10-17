@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#SBATCH -J zhilong
+#SBATCH -p gpu4
+#SBATCH --cpus-per-task=10
+#SBATCH--reservation=root_46
+#SBATCH --gres=gpu:1 
+
+module load cuda/11.3
+python onega.py

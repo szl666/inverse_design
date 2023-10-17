@@ -1,0 +1,14 @@
+#!/bin/bash
+folder_path="/fs0/home/liqiang/onega_test/opt_poscars_mp30"
+previous_time=$(stat -c %Y "$folder_path")
+sbatch sub_gpu1
+while true; do
+  current_time=$(stat -c %Y "$folder_path")
+  sleep 2000
+  if [ "$current_time" == "$previous_time" ]; then
+    latest_job_id=$(squeue | tail -n 1 | awk '{print $1}')	
+    scancel $latest_job_id
+    sbatch sub_gpu1
+  fi
+  previous_time="$current_time"
+done

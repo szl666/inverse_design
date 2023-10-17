@@ -1,0 +1,25 @@
+analyze_res: true
+conti: true
+disable_bar: false
+exponent: 1
+improve_symmetry: false
+interval: 10
+label: None
+max_z_value: 10
+min_sigma: 0
+min_z_value: -10
+model_path: /fs0/home/liqiang/onega_test/hydra/singlerun/2023-08-09/catalyst
+# model_path: /fs0/home/liqiang/onega_test/hydra/singlerun/2022-10-25/catalyst
+n_step_each: 100
+num_starting_points: 100
+num_steps: 1000
+property:
+  - Tc_supercon
+property_range: [[1000]]
+save_traj: false
+start_from: None
+step_lr: 1e-4
+struct_path: opt_poscars_mp30
+supervised_model: DimeNet
+tasks: opt
+train_mode: false

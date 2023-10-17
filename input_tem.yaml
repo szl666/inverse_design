@@ -1,0 +1,23 @@
+train_mode: False
+supervised_model: DimeNet
+tasks: opt
+property: [Ehull, Bandgap]
+property_range: [[0], [1, 1.5]]
+n_step_each: 100
+step_lr: 1e-4
+min_sigma: 0
+save_traj: False
+disable_bar: False
+num_steps: 500
+analyze_res: True
+struct_path: opt_poscars
+model_path: /fs0/home/liqiang/onega/hydra/singlerun/2023-01-14/catalyst
+start_from: None
+label: None
+improve_symmetry: True
+min_z_value: -10
+max_z_value: 10
+exponent: 1
+num_starting_points: 100
+interval: 10
+conti: False

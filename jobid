@@ -1,0 +1,2 @@
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           1870958      gpu4  zhilong  liqiang  R       0:58      1 gpu04
