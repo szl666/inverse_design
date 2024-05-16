@@ -9,7 +9,9 @@
 
 In the current version of T2MAT, we developed a modified CDVAE with improved symmetry for generating material structures. 
 
-We have developed a new generative model——SymGEN. The **symmetry**(ratio of structures with non-P1 space group, **Figure e**), **thermodynamic stability**(DFT-calculated formation energies, **Figure f**) and **kinetic stability**(DFT-calculated phonon properties, **Figure g**) of generated structures are significantly improved compared to the CDVAE. SymGEN will be replaced with the CDVAE in T2MAT after the manuscript of the SymGEN is submitted.
+We have developed a new generative model——SymGEN. The **symmetry**(ratio of structures with non-P1 space group, **Figure e**), **thermodynamic stability**(DFT-calculated formation energies, **Figure f**) and **kinetic stability**(DFT-calculated phonon properties, **Figure g**) of generated structures are significantly improved compared to the CDVAE. 
+
+SymGEN will be replaced with the CDVAE in T2MAT after the manuscript of the SymGEN is submitted.
 
 
 ![image](https://github.com/szl666/inverse_design/assets/44625390/0e5c0aff-6840-4cd6-a5a9-df32d1613f3b)
