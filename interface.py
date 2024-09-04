@@ -5,7 +5,6 @@ import openai
 
 
 def get_key_words(text):
-    openai.api_key = ""
     model_engine = "text-davinci-003"
     prompt = f"Distill material properties from this sentence in the format: property: value/value range(If the range exists, it should be formatted in '[a, b] value unit', possible property list:[bulk modulus, band gap, Ehull]) :{text}"
     completions = openai.Completion.create(
