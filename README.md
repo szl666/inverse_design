@@ -16,3 +16,6 @@ SymGEN will be replaced with the CDVAE in T2MAT after the manuscript of SymGEN i
 
 
 ![image](https://github.com/szl666/inverse_design/assets/44625390/0e5c0aff-6840-4cd6-a5a9-df32d1613f3b)
+
+# Citation
+Zhilong Song, Shuaihua Lu, Qionghua Zhou, Jinlan Wang, T2MAT (text-to-material): A universal agent for generating material structures with goal properties from a single sentence, Acta Physico-Chimica Sinica, in press. doi: 10.1016/j.actphy.2025.100213
